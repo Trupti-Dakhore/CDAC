@@ -1,0 +1,11 @@
+1) Which field of the Customers table is the primary key?
+Ans) Cnum is primary key of the Customer table.
+
+ 2) What is the 4th column of the Customers table?
+Ans) the 4th column of cutmore table is Rating.
+
+3) What is another word for row? For column?
+Ans) The another word for row is record and for the column is field.
+
+4) Why isn’t it possible to see the first five rows of a table?
+Ans) In RDBMS, there is no such thing as a first or last row in a table, the data is arrange  in random order so unless we provide order by query we cannot get first 5 rows of a table.
