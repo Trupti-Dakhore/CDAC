@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id = "list">
+        <option value="1">Mango</option>
+        <option value="2">Mango</option>
+        <option value="3">Mango</option>
+        <option value="4">Mango</option>
+        <option value="5">Mango</option>
+        <option value="6">Mango</option>
+        <option value="7">Mango</option>
+        <option value="8">Mango</option>
+        <option value="9">Mango</option>
+        <option value="10">Mango</option>
+        <option value="11">Mango</option>
+    </select>
+    <button onclick="deleteItems()">Delete</button>
+
+    <script>
+        function deleteItems(){
+        const selectlist = document.getElementById("list");
+        selectlist.remove(selectlist.selectIdenx); 
+    }
+    </script>
+    
+</body>
+</html>
