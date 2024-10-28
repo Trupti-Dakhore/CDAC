@@ -1,0 +1,64 @@
+1) mysql> select count(date) from orders;
++-------------+
+| count(date) |
++-------------+
+|          10 |
++-------------+
+1 row in set (0.00 sec)
+
+2) Write a query that counts the number of different non-NULL city values in the
+Customers table.
+mysql> SELECT COUNT(DISTINCT city)
+    -> FROM Customers
+    -> WHERE city IS NOT NULL;
++----------------------+
+| COUNT(DISTINCT city) |
++----------------------+
+|                    4 |
++----------------------+
+1 row in set (0.00 sec)
+
+3) Write a query that selects each customer’s smallest order
+mysql> select cnum, min(amt) as smallamt from orders group by cnum;
++------+----------+
+| cnum | smallamt |
++------+----------+
+| 2008 |    18.69 |
+| 2001 |   767.19 |
+| 2007 |  1900.10 |
+| 2003 |  5160.45 |
+| 2002 |  1713.23 |
+| 2004 |    75.75 |
+| 2006 |  4723.00 |
++------+----------+
+7 rows in set (0.00 sec)
+
+4) Write a query that selects the first customer, in alphabetical order, whose name
+begins with G.
+
+
+5) Write a query that selects the highest rating in each city.
+mysql> select city,max(rating) as highrating from customers group by city;
++----------+------------+
+| city     | highrating |
++----------+------------+
+| London   |        100 |
+| Rome     |        200 |
+| San Jose |        300 |
+| Berlin   |        300 |
++----------+------------+
+4 rows in set (0.00 sec)
+
+6) Write a query that counts the number of salespeople registering orders for each
+day. (If a salesperson has more than one order on a given day, he or she should be
+counted only once.).
+mysql> select date,count(distinct snum) as countOfSalesPeople from orders group by date;
++------------+--------------------+
+| date       | countOfSalesPeople |
++------------+--------------------+
+| 1990-10-03 |                  4 |
+| 1990-10-04 |                  2 |
+| 1990-10-05 |                  1 |
+| 1990-10-06 |                  2 |
++------------+--------------------+
+4 rows in set (0.03 sec)
